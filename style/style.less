@@ -1,0 +1,207 @@
+/*  fonts  */
+@font-face{
+    font-family: 'seido';
+    src: url("fonts/BwSeidoRoundDEMO-Light.otf");
+}
+@font-face{
+    font-family: 'seido-bold';
+    src: url("fonts/BwSeidoRoundDEMO-Bold.otf");
+}
+
+/* colors */
+@white: #fcfcfc;
+@blue: #f7fcff;
+@red: #e92042;
+@purple: #1a1a4c;
+@purple2: #596188;
+
+@title-size: 2.5rem;
+@topspace: 6rem;
+
+body {
+    background: @blue;
+}
+
+.header {
+    background: @white;
+    box-shadow: 0 9px 6px -5px rgba(0,0,0,.1);
+    z-index: 1;
+    .header-menu {
+        display: flex;
+        padding-top: 1rem;
+        justify-content: flex-end;
+        .menu {
+            justify-self: flex-end;
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem 0;
+            list-style: none;
+            li.active, li:hover {
+                a {
+                    font-family: 'seido-bold';
+                }
+            }
+            li {
+                display: block;
+                a {
+                    font-family: 'seido';
+                    color: @purple;
+                    padding: .5rem;
+                    text-decoration: none;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .title {
+        padding-left: 0;
+        h1 {
+            width: 500px;
+            margin-bottom: 70px;
+            color: @purple;
+            font-family: 'seido-bold';
+            font-size: 4rem;
+        }
+    }
+    .photograph {
+        background: @red;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 9px 6px -5px rgba(0,0,0,.2);
+        z-index: 2;
+        position: absolute;
+        bottom: -110px;
+        right: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.body {
+    .cards {
+        padding-top: @topspace;
+        .card:nth-child(2) {
+            margin-top: calc(@topspace / 2);
+        }
+        .card {
+            width: 400px;
+            background: @white;
+            box-shadow: 0 5px 6px -1px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row;
+            border: none;
+            .icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                margin: 1.25rem;
+            }
+            .content {
+                display: inline-block;
+                padding-top: 1rem;
+                .title {
+                    font-family: 'seido-bold';
+                    font-size: 1.25rem;
+                    color: @purple;
+                    margin-bottom: 1rem;
+                }
+                .description {
+                    font-family: 'seido';
+                    font-size: 1rem;
+                    color: @purple2;
+                }
+            }
+        }
+    }
+
+    .about {
+        margin-top: @topspace;
+        .title {
+            font-size: @title-size;
+            color: @purple;
+            font-family: 'seido-bold';
+        }
+        .card {
+            margin-left: 0 !important;
+            .content {
+                padding: 1.15rem;
+            }
+        }
+    }
+
+    .projects {
+        margin-top: @topspace;
+        .title {
+            font-size: @title-size;
+            color: @purple;
+            text-align: center;
+            font-family: 'seido-bold';
+            margin-bottom: calc(@topspace/2);
+        }
+        .projects-cards {
+            justify-content: space-between;
+            .project {
+                width: 45%;
+                border-radius: 10px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .rocket-cont {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img {
+            width: 60%;
+            height: auto;
+        }
+    }
+}
+
+.footer {
+    margin-top: @topspace;
+    .content{
+        background: @red;
+        height: calc(@topspace / 2);
+    }
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    box-shadow: 0 9px 5px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    background: @white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .menu-bar {
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+        li {
+            margin-bottom: 1.5rem;
+            a{
+                text-emphasis: center;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
